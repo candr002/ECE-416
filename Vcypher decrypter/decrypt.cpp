@@ -64,7 +64,9 @@ int main()
 
 
     ///=========================== END Display =====================================
-
+    char playagain = 'y';
+    while (toupper(playagain) == 'Y')
+    {
     cout << "what letter do you want to change? ";
     cin >> cypherval;
     cout << "\nwhat do you want to change it to? ";
@@ -80,6 +82,16 @@ int main()
     textbegin = cyphertext.begin();
     textend = cyphertext.end();
     displayText(textbegin,textend);
+    charprobsitr = charCount.begin();
+    while (charprobsitr != charCount.end())
+    {
+        cout << charprobsitr->getletter() << "\t" << charprobsitr->getcount() << endl;
+        charprobsitr++;
+    }
+
+    cout << "\n\nChange another letter?  ";
+    cin >> playagain;
+    }
     ///=========================== Populate Counts =================================
 
 
